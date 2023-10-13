@@ -1,0 +1,40 @@
+<%- include('layout/header') %>
+<style>
+    input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+form *{
+    margin-top: 5px;
+}
+</style>
+<div class="container" style="margin: -10% 0 0 -0;">
+  <div class="row">
+    <div class="col-lg-12 p-4 " style="width: 70%;transform: translateX(50%,50%); box-shadow: 3px 3px 5px 5px rgb(212, 212, 212); border-radius: 3px; border:.5px solid rgb(212, 212, 212); transform:translate(50%,50%); ">
+      <h1 style="text-align: center; " class="bg-primary text-light w-100">Add users </h1>
+      <form action="/Add" method="post" id="add-form" enctype="multipart/form-data">
+        <hr>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Name</label>
+            <input type="text" min="2" max="20" class="form-control" id="exampleInputName" aria-describedby="emailHelp" placeholder="Enter Name" required>
+          </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Phone</label>
+          <input type="number" class="form-control" id="exampleInputPhone" placeholder="Enter phone" required>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Select Image</label><br>
+            <!-- <input id="fileImage" value="test" name="fileImage[]" type="file" multiple="true" style="border: 1px solid gainsboro; " class="w-100 rounded" required/> -->
+             </div>
+        <button type="submit" class="btn btn-primary my-3 w-100">Add user</button>
+      </form>
+    </div>
+  </div>
+</div>
+<%- include('layout/footer') %>
